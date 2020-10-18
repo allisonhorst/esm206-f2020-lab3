@@ -121,36 +121,7 @@ ggplot(n_am_longer, aes(x = year, y = pop)) +
   theme_minimal()
 ```
 
-
-### Part 2: 
-
-Exploring normality, central tendency and data spread, probabilities associated with Z-scores
-
-Use `pnorm()` to find the probability associated with different values of a variable with given mean and standard deviation. Default is that the *lower tail* area is returned (the probability of less than or equal to the given value). 
-
-For example: 
-
-If a population of lizards has a population mean and standard deviation of 10.4 and 3.8 grams, respectively, then what is the probability of a randomly selected lizard having a mass of less than or equal to 9.0 grams? 
-
-```{r}
-pnorm(9.0, mean = 10.4, sd = 3.8)
-
-# A 35.6% chance
-```
-
-For that same population, what is the probability of randomly selecting a lizard with a mass of greater than or equal to 13.0 grams?
-
-```{r}
-pnorm(13.0, mean = 10.4, sd = 3.8, lower.tail = FALSE)
-```
-
-What proportion of the population do you expect to have a mass between 11.0 and 14.0 grams? When in doubt, draw a picture! 
-
-```{r}
-pnorm(14, mean = 10.4, sd = 3.8) - pnorm(11, mean = 10.4, sd = 3.8)
-```
-
-### Part 3: Writing functions in R
+### Part 2: Writing functions in R
 
 What is a function? A function is a named bit of code that is meant to perform specific operations or tasks with user-defined arguments. 
 
@@ -206,6 +177,36 @@ fish_weight(0.00001, 74, 3.076)
 fish_weight(a = 0.00001, L = 42, b = 3.076)
 ```
 Cool! Now you can make your own functions, with arguments that you name and specify! 
+
+### Part 3: 
+
+Exploring normality, central tendency and data spread, probabilities associated with Z-scores
+
+Use `pnorm()` to find the probability associated with different values of a variable with given mean and standard deviation. Default is that the *lower tail* area is returned (the probability of less than or equal to the given value). 
+
+For example: 
+
+If a population of lizards has a population mean and standard deviation of 10.4 and 3.8 grams, respectively, then what is the probability of a randomly selected lizard having a mass of less than or equal to 9.0 grams? 
+
+```{r}
+pnorm(9.0, mean = 10.4, sd = 3.8)
+
+# A 35.6% chance
+```
+
+For that same population, what is the probability of randomly selecting a lizard with a mass of greater than or equal to 13.0 grams?
+
+```{r}
+pnorm(13.0, mean = 10.4, sd = 3.8, lower.tail = FALSE)
+```
+
+What proportion of the population do you expect to have a mass between 11.0 and 14.0 grams? When in doubt, draw a picture! 
+
+```{r}
+pnorm(14, mean = 10.4, sd = 3.8) - pnorm(11, mean = 10.4, sd = 3.8)
+```
+
+
 
 ### Part 4: GitHub for project management & communication
 
